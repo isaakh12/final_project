@@ -6,6 +6,9 @@
 3. Run pip install git+https://github.com/physoce/physoce-py on terminal to install physoce module
 4. Install matplotlib, numpy, pandas, and scipy
 5. Run final_project.ipynb notebook on Jupyter or as a .py file in bash
+   ### Output
+   1. Raw data figures and interpolated data for each transect
+   2. PCA for all data variables
 
 ## Dependencies
 1. Data must be a .csv with the following columns:
@@ -15,6 +18,8 @@
    B) 'latitude' == Latitudinal coordinates of data collection
   
    C) 'rangetobot' == Depth above seafloor of data collection
+   
+   D) 'transect' == transect number (integer)
   
    D) data values == data collected (oxygen here, can also be temperature, salinity, etc.)
 
