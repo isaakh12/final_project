@@ -4,7 +4,7 @@
 1. Add data file to working directory
 2. Download modules (create_datasets.py, make_plots.py, make_pca.py) and final_project.ipynb from repository to working directory
 3. Run `pip install git+https://github.com/physoce/physoce-py` on terminal to install physoce module
-4. Install matplotlib, numpy, pandas, and scipy by running the following code in the terminal: `conda install matplotlib numpy pandas scipy`
+4. Install matplotlib, numpy, pandas, scipy, jupyter, and jupyterlab by running the following code in the terminal: `conda install matplotlib numpy pandas scipy`
 5. Run final_project.ipynb notebook on Jupyter or as a .py file in bash (after saving as a .py file from Jupyter)
    To open a jupyter notebook, navigate to your working directory (with the datafile and modules) and run the following code: `jupyter lab`
    ### Output
