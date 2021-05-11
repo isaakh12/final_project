@@ -3,8 +3,9 @@
 ## Steps needed to run code
 1. Add data file to working directory
 2. Download modules (create_datasets.py, make_plots.py, make_pca.py) and final_project.ipynb from repository to working directory
-3. Run pip install git+https://github.com/physoce/physoce-py on terminal to install physoce module
-4. Install matplotlib, numpy, pandas, and scipy
+3. Run `pip install git+https://github.com/physoce/physoce-py` on terminal to install physoce module
+4. Install matplotlib, numpy, pandas, and scipy by running the following code in the terminal:
+  `conda install matplotlib numpy pandas scipy`
 5. Run final_project.ipynb notebook on Jupyter or as a .py file in bash (after saving as a py file from Jupyter)
    ### Output
    1. Raw data figures and interpolated data for each transect
