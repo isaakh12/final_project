@@ -1,4 +1,9 @@
 def make_pca(df, vars):
+    '''
+    Function used to conduct a PCA
+    Input: dataframe, list of variables that you want to use in your PCA
+    Output: Eigenvalues, Eigenvectors, Proportion of variance taken up by first 2 PCs, Factor Loadings
+    '''
     import numpy as np
     from scipy import linalg
     from matplotlib import pyplot as plt
