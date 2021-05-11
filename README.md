@@ -1,5 +1,8 @@
 # final_project
 
+## Utility
+This project is used to interpolate and visualize spatial data (latitude/longitude) collected over transects as well as conduct a PCA on response variables (in this case oxygen, temperature, and salinity)
+
 ## Steps needed to run code
 1. Add data file to working directory
 2. Download modules (create_datasets.py, make_plots.py, make_pca.py) and final_project.ipynb from repository to working directory
