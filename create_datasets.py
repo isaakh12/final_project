@@ -19,9 +19,10 @@ def create_datasets(df, transect_number, var):
     numpy_dist[0] = 0.0
     for i in range(1,len(numpy_long)):
         numpy_dist[i] = numpy_dist[i-1] + haver[i-1]
-    transect_sub['distance'] = numpy_dist
+    transect_sub['distance'] = numpy_dist*1000
     grid_x, grid_y = np.mgrid[0:max(transect_sub['distance']):1000j, 0:max(transect_sub['rangetobot']):1000j]
-    interp = griddata((transect_sub['distance'], transect_sub['rangetobot']), transect_sub[var], (grid_x, grid_y), method='linear')
+    interp_cubic = griddata((transect_sub['distance'], transect_sub['rangetobot']), transect_sub[var], (grid_x, grid_y), method='cubic')
+    interp_linear = griddata((transect_sub['distance'], transect_sub['rangetobot']), transect_sub[var], (grid_x, grid_y), method='linear')
     min_var = min(df[var])
     max_var = max(df[var])
-    return transect_sub, interp, min_var, max_var
+    return transect_sub, interp_linear, interp_cubic, min_var, max_var
