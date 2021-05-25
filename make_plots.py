@@ -47,19 +47,3 @@ def make_plots(subset_df, interp_df1, interp_df2, transect_number, var, min_var,
     plt.xlabel("Transect Distance [m]")
     plt.ylabel("Depth above seafloor [m]")
     plt.show()
-
-# generate a synthetic field with an exponential model
-x = subset_df['distance']
-y = subset_df['rangetobot']
-model = gs.Exponential(dim=2, var=2, len_scale=8)
-srf = gs.SRF(model, mean=0, seed=19970221)
-field = srf((x, y))
-# estimate the variogram of the field
-bin_center, gamma = gs.vario_estimate((x, y), field)
-# fit the variogram with a stable model. (no nugget fitted)
-fit_model = gs.Stable(dim=2)
-fit_model.fit_variogram(bin_center, gamma, nugget=False)
-# output
-ax = fit_model.plot(x_max=max(bin_center))
-ax.scatter(bin_center, gamma)
-print(fit_model)
