@@ -6,7 +6,7 @@ def make_plots(subset_df, interp_df1, interp_df2, transect_number, var, min_var,
     '''
     from matplotlib import pyplot as plt
     plt.figure()
-    plt.scatter(subset_df['distance'], subset_df['rangetobot'], c=subset_df[var])
+    plt.scatter(subset_df['distance'], subset_df['rangetobot'], c=subset_df[var], s = 3)
     plt.clim(min_var, max_var)
     if(var == 'oxygen'):
         plt.colorbar(label = "Oxygen [\u03BCmol/L]")
