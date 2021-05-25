@@ -11,6 +11,7 @@ def create_datasets(df, transect_number, var):
     import numpy as np
     from scipy.interpolate import griddata
     from physoce import util
+    pd.options.mode.chained_assignment = None
     transect_sub = df[df['transect'] == transect_number]
     numpy_long = pd.Series.to_numpy(transect_sub['longitude'])
     numpy_lat = pd.Series.to_numpy(transect_sub['latitude'])

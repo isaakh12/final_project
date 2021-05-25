@@ -1,11 +1,10 @@
-def mean_maker(subset_df, transect):
+def mean_maker(subset_df, transect, oxy_means, temp_means, sal_means, depth_means, reef_means, transect_list):
+    '''
+    Function that makes lists of means for each variable
+    Input: subset dataframe, transect number, empty lists of variables that you want to average
+    Output: Filled list of variables and transect number
+    '''
     import numpy as np
-    oxy_means = []
-    temp_means = []
-    sal_means = []
-    depth_means = []
-    reef_means = []
-    transect_list = []
     oxy_mean = np.mean(subset_df['oxygen'])
     temp_mean = np.mean(subset_df['temp'])
     sal_mean = np.mean(subset_df['salinity'])
