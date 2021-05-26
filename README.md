@@ -1,13 +1,13 @@
 # final_project
 
 ## Utility
-This project is used to interpolate and visualize spatial data (latitude/longitude) collected over transects as well as conduct a PCA on response variables (in this case oxygen, temperature, and salinity)
+This project is used to interpolate and visualize spatial data (latitude/longitude) collected over transects as well as conduct a PCA on response variables (in this case oxygen, temperature, and salinity) and run linear models on various potential predictor variables. 
 
 ## Steps needed to run code
 1. Add data file to working directory
 2. Download modules (create_datasets.py, make_plots.py, make_pca.py) and final_project.ipynb from repository to working directory
-3. Run `pip install git+https://github.com/physoce/physoce-py` on terminal to install physoce module
-4. Install matplotlib, numpy, pandas, scipy, jupyter, and jupyterlab by running the following code in the terminal: `conda install matplotlib numpy pandas scipy jupyter jupyterlab`
+3. Install matplotlib, numpy, pandas, scipy, jupyter, and jupyterlab by running the following code in the terminal: `conda install matplotlib numpy pandas scipy jupyter jupyterlab`
+4. Run `pip install git+https://github.com/physoce/physoce-py` on terminal to install physoce module
 5. Run final_project.ipynb notebook on Jupyter or as a .py file in bash (after saving as a .py file from Jupyter). To open a jupyter notebook, navigate to your working directory (with the datafile and modules) and run the following code: `jupyter lab`
    ### Output
    1. Raw data figures and interpolated data for each transect
