@@ -7,8 +7,8 @@ def make_plots(subset_df, interp_df1, interp_df2, transect_number, var, min_var,
     from matplotlib import pyplot as plt
     grid = plt.GridSpec(2, 3, wspace=0, hspace=0)
 
-    plt.figure(figsize = (15,8))
-    plt.suptitle("Transect {:d}".format(transect_number), size = 15)
+    plt.figure(figsize = (18,8))
+    plt.suptitle("Transect {:d}".format(transect_number), size = 20)
     plt.subplot(grid[0, 1])
     #plt.subplot2grid( (6,6), [0,1], 2, 2 )
     plt.scatter(subset_df['distance'], subset_df['rangetobot'], c=subset_df[var], s = 3)
@@ -22,11 +22,8 @@ def make_plots(subset_df, interp_df1, interp_df2, transect_number, var, min_var,
     plt.title("Original Data")
     plt.xlabel("Transect Distance [m]")
     plt.ylabel("Depth above seafloor [m]")
-    #plt.show()
 
-    #plt.figure()
     plt.subplot(grid[1, 0])
-    #plt.subplot2grid( (6,6), [3,0], 2, 2 )
     plt.imshow(interp_df1.T, extent=(0,max(subset_df['distance']),0,max(subset_df['rangetobot'])), origin='lower', aspect = 'auto', cmap='viridis')
     plt.plot(subset_df['distance'], subset_df['rangetobot'], 'x', ms = 1, c = 'k')
     plt.clim(min_var, max_var)
@@ -40,9 +37,8 @@ def make_plots(subset_df, interp_df1, interp_df2, transect_number, var, min_var,
     plt.xlabel("Transect Distance [m]")
     plt.ylabel("Depth above seafloor [m]")
 
-    #plt.figure()
+
     plt.subplot(grid[1, 2])
-    #plt.subplot2grid( (6,6), [3,3], 2, 2 )
     plt.imshow(interp_df2.T, extent=(0,max(subset_df['distance']),0,max(subset_df['rangetobot'])), origin='lower', aspect = 'auto', cmap='viridis')
     plt.plot(subset_df['distance'], subset_df['rangetobot'], 'x', ms = 1, c = 'k')
     plt.clim(min_var, max_var)
